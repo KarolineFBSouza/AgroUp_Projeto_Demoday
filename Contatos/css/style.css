@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+/* =========================================================  */
+
+body { /* Aqui está presente todas as especificações do corpo da página, como fonte das letras, tamanhos etc*/
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ==================================== */
+nav { /* Aqui está presente todas as especificações da navbar*/
+  display: flex;
+  width: 100%;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #295B1D;
+  border-top: 6px solid #F9F6F1;
+  box-shadow: 0 0 8px #07240f;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+nav .logo img {
+  width: 160px;
+  height: 60px;
+  filter: drop-shadow(0 0 8px #07240f);
+  margin-left: 30px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 50px;
+}
+
+nav ul li a {
+  color: #F9F6F1;
+  font-size: 20px;
+  font-weight: 400;
+  transition: 0.2s ease;
+}
+
+nav ul li a:hover { /* efeito que acontece quando se coloca o mouse em cima das categorias da navbar*/
+  color: #295B1D;
+  background-color: #F9F6F1;
+  font-weight: 600;
+  height: 40px;
+  border-radius: 0px 0px 20px 20px;
+  font-size: 22px;
+  padding: 15.9px 10px 4px;
+}
+
+/* ==================================== */
+.search-box { /*barra de pesquisa*/
+  height: 40px;
+  position: relative;
+  width: 60px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-box.active,
+.search-btn {
+  width: 200px;
+  color: #664aff;
+}
+
+.search-box input {
+  height: 40px;
+  box-shadow: 0 0 6px #07240f;
+  text-align: center;
+  width: 220px;
+  border: none;
+  outline: none;
+  background: #f9f6f1;
+  font-size: 18px;
+  border-radius: 50px;
+  padding: 0 40px 0 20px;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-box input.active {
+  opacity: 1;
+  color: #000000;
+}
+
+.search-box .search-btn {
+  height: 40px;
+  width: 40px;
+  color: #6e8b21;
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+  background: #f9f6f1;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 6px #07240f;
+}
+
+.search-box .search-btn.active {
+  right: 120px;
+  height: 50px;
+  width: 80px;
+  color: #f9f6f1;
+  background: #6e8b21;
+  line-height: 50px;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.search-box .cancel-btn {
+  position: absolute;
+  top: 50%;
+  right: 90px;
+  transform: translateY(-50%);
+  color: #6e8b21;
+  filter: drop-shadow(0 0 2px #07240f);
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-box.active .cancel-btn {
+  right: 120px;
+  transform: translateY(-50%) rotate(360deg);
+}
+
+.search-box .search-data {
+  text-align: center;
+  padding-top: 7px;
+  color: #6e8b21;
+  font-size: 18px;
+  word-wrap: break-word;
+}
+
+.search-box .search-btn.active {
+  display: none;
+}
+
+/* ==================================== */
+.conta { /*botão minha conta*/
+  color: #f9f6f1;
+  background: linear-gradient(150deg, #66801f, #14360b);
+  width: 170px;
+  font-weight: 300;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding: 5px;
+  height: 40px;
+  border-radius: 13px;
+  box-shadow: 0 0 8px #07240fa2;
+  margin-left: 10px;
+  font-size: 20px;
+  margin-right: 80px;
+  justify-content: space-around;
+}
+
+/* =========================================================  */
+
+main { /* daqui para baixo se encontra todos elementos presentes na tag main. Nessa parte, temos a animação do joquinha rolando quando se abre a parte de contatos */
+  width: 100%;
+  height: 320px;
+  background-image: url(../img/image\ 29.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 8px #07240f;
+}
+
+.joca-para-o-meio {
+  animation: joca-para-o-meio 4s ease;
+}
+
+main h1 {
+  color: #F9F6F1;
+  font-size: 70px;
+  text-align: center;
+  text-shadow: 0 0 8px #07240f;
+}
+/* =========================================================  */
+
+section { /* daqui para baixo se encontra todos elementos presentes na tag section, onde se está as informações de contatos da agroUP.*/
+  width: 100%;
+  height: 520px;
+  background-color: #F9F6F1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section h1,
+section h2,
+section h3 {
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+section h1 {
+  color: #6e8b21;
+  margin: 20px;
+}
+
+section h2 {
+  margin-top: -20px;
+  color: #07240f;
+  font-size: 25px;
+  margin: 55px;
+}
+
+section h3 {
+  margin-top: 20px;
+  color: #6e8b21;
+  font-size: 25px;
+  margin: 40px;
+}
+
+.joca {
+  filter: drop-shadow(0 0 14px #07240f);
+  display: flex;
+  align-items: center;
+}
+
+/* =========================================================  */
+
+footer { /* daqui para baixo se encontra todos elementos presentes na tag footer. Desde a ativação do botão, animação, prototipagem e etc.*/
+  width: 100%;
+  height: 500px;
+  background-color: #295B1D;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+/* ==================================== */
+
+footer .slogan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  margin-top: 15px;
+  left: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+footer .slogan img {
+  width: 20%;
+  filter: drop-shadow(0 0 3px #103b02);
+}
+
+footer .slogan h2 {
+  margin-top: 10px;
+  font-size: 20px;
+  margin-left: 35px;
+  color: #f9f6f1;
+  text-shadow: 0 0 8px #07240f;
+  text-align: center;
+}
+
+/* ==================================== */
+
+footer .social-icons {
+  position: absolute;
+  bottom: 25%;
+  left: 5%;
+  transform: translateY(50%);
+  margin: 20px;
+}
+
+footer .social-icons h1 {
+  color: #6e8b21;
+  text-shadow: 0 0 8px #07240f;
+}
+
+footer .social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  border: none;
+  background-color: #F9F6F1;
+  color: #295B1D;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 15px;
+  transition: 0.5s ease-in-out;
+}
+
+footer .social-icons a:hover {
+  color: #f9f6f1;
+  background-color: #295B1D;
+  font-size: 35px;
+}
+
+/* ==================================== */
+
+footer .infoSobre,
+footer .infoPedidos,
+footer .infoSuporte,
+footer .info {
+  float: right;
+  justify-content: center;
+  margin-right: 30px;
+  padding: 20px;
+}
+
+footer .infoSobre h3,
+footer .infoPedidos h3,
+footer .infoSuporte h3,
+footer .info h3 {
+  margin-top: 65px;
+  margin-right: 25px;
+}
+
+footer h3 {
+  color: #6e8b21;
+}
+
+footer h4 {
+  color: #f9f6f1;
+  margin-top: 20px;
+}
+
+/* ==================================== */
+
+footer .rodape {
+  width: 100%;
+  padding: 20px 8%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .rodape hr {
+  width: 100%;
+  height: 1px;
+  background-color: #F9F6F1;
+  margin: 10px 0;
+  position: absolute;
+  bottom: 100%;
+  z-index: 3;
+  margin-left: -122px;
+}
+
+footer .rodape p {
+  color: #fff;
+  margin: 0;
+}
+
+footer .rodape h5,
+footer .rodape h6 {
+  color: #f9f6f1;
+  margin: 0;
+  font-size: 15px;
+}
+
+@keyframes joca-para-o-meio {
+  0% {
+    transform: translateX(-100%) rotate(0);
+  }
+  100% {
+    transform: translateX(5%) rotate(360deg);
+  }
+}
