@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {/* Aqui está presente todas as especificações do corpo da página, como fonte das letras, tamanhos etc*/
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ==================================== */
+
+nav {/* Aqui está presente todas as especificações da navbar*/
+  display: flex;
+  width: 100%;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #295B1D;
+  border-top: 6px solid #F9F6F1;
+  box-shadow: 0 0 8px #07240f;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+nav .logo img { /* Aqui está presente todas as especificações do logo na navbar*/
+  width: 160px;
+  height: 60px;
+  filter: drop-shadow(0 0 8px #07240f);
+  margin-left: 30px;
+}
+
+nav ul { /* alinhando as páginas que a navbar redireciona*/
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+
+nav ul li {/* alinhando a margem das páginas que a navbar redireciona*/
+  margin: 0 50px;
+}
+
+nav ul li a {/* mudando a cor das páginas que a navbar redireciona*/
+  color: #F9F6F1;
+  font-size: 20px;
+  font-weight: 400;
+  transition: 0.2s ease;
+}
+
+nav ul li a:hover {/* efeito que acontece quando se coloca o mouse em cima das categorias da navbar*/
+  color: #295B1D;
+  background-color: #F9F6F1;
+  font-weight: 600;
+  height: 40px;
+  border-radius: 0px 0px 20px 20px;
+  font-size: 22px;
+  padding: 15.9px 10px 4px;
+}
+
+/* ==================================== */
+
+.search-box { /* daqui para baixo se encontra todos elementos da barra de pesquisa. Desde a ativação do botão, animação, prototipagem e etc.*/
+  height: 40px;
+  position: relative;
+  width: 60px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-box.active,
+.search-btn {
+  width: 200px;
+  color: #664aff;
+}
+
+.search-box input {
+  height: 40px;
+  box-shadow: 0 0 6px #07240f;
+  text-align: center;
+  width: 220px;
+  border: none;
+  outline: none;
+  background: #f9f6f1;
+  font-size: 18px;
+  border-radius: 50px;
+  padding: 0 40px 0 20px;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-box input.active {
+  opacity: 1;
+  color: #000000;
+}
+
+.search-box .search-btn {
+  height: 40px;
+  width: 40px;
+  color: #6e8b21;
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+  background: #f9f6f1;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 6px #07240f;
+}
+
+.search-box .search-btn.active {
+  right: 120px;
+  height: 50px;
+  width: 80px;
+  color: #f9f6f1;
+  background: #6e8b21;
+  line-height: 50px;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.search-box .cancel-btn {
+  position: absolute;
+  top: 50%;
+  right: 90px;
+  transform: translateY(-50%);
+  color: #6e8b21;
+  filter: drop-shadow(0 0 2px #07240f);
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-box.active .cancel-btn {
+  right: 120px;
+  transform: translateY(-50%) rotate(360deg);
+}
+
+.search-box .search-data {
+  text-align: center;
+  padding-top: 7px;
+  color: #6e8b21;
+  font-size: 18px;
+  word-wrap: break-word;
+}
+
+.search-box .search-btn.active {
+  display: none;
+}
+
+/* ==================================== */
+
+.conta { /*botão minha conta*/
+  color: #f9f6f1;
+  background: linear-gradient(150deg, #66801f, #14360b);
+  width: 170px;
+  font-weight: 300;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding: 5px;
+  height: 40px;
+  border-radius: 13px;
+  box-shadow: 0 0 8px #07240fa2;
+  margin-left: 10px;
+  font-size: 20px;
+  margin-right: 80px;
+  justify-content: space-around;
+}
+
+.conta2 { /* especificações do botão "Minha Conta 2"*/
+  color: #f9f6f1;
+  background: linear-gradient(150deg, #66801f, #14360b);
+  width: 150px;
+  padding-left: 7px;
+  font-weight: 300;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  height: 40px;
+  border-radius: 13px;
+  box-shadow: 0 0 8px #07240f;
+  margin-left: 32%;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px;
+  margin-top: -20%;
+  margin-bottom: 20%;
+  justify-content: space-around;
+}
+
+.conta3 { /* especificações do botão "Salvar as alterações"*/
+  color: #f9f6f1;
+  background: linear-gradient(150deg, #66801f, #14360b);
+  width: 170px;
+  padding-left: 8px;
+  font-weight: 300;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  height: 40px;
+  border-radius: 13px;
+  box-shadow: 0 0 8px #07240f;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 12%;
+  margin-bottom: 40%;
+  margin-right: 10%;
+  margin-left: -2%;
+}
+
+
+/* ======================================================================= */
+/* Aqui se encontra a tag semantica aside, onde se encotra todos os itens que estão na parte de baixo da nav, na lateral esquerda do site*/
+
+aside { /* essa tag é onde foi delimitado a cor e a largura do aside*/
+  background-color: #F9F6F1;
+  width: 30%;
+}
+
+aside img { /* aqui é onde foi delimitado as medidas da imagem presente no aside*/
+  height: 40%;
+  width: 40%;
+  margin-top: 20%;
+  margin-left: 28%;
+  margin-bottom: -10px;
+}
+
+aside h1 { /* aqui é a tag de título, que contém o nome da pessoa que fez login no site*/
+  margin-left: 32%;
+  margin-bottom: 30%;
+  color: #295B1D;
+  margin-top: 1%;
+  margin-bottom: 30%;
+}
+
+aside h2 { /* aqui é a tag de subtítulo, que contém a mensagem de boas vindas*/
+  margin-left: 13%;
+  margin-bottom: -5%;
+  margin-top: 15%;
+  color: #4c6f52;
+}
+
+h2 span { /* span é a tag que faz uma ou mais palavras terem alguma alteração */
+  color: #0c401b;
+}
+
+aside button { /* esse é o botão "minha conta", para mostrar onde o usuário está localizado nas páginas do site */
+  width: 35%;
+  height: 35%;
+  font-size: 185%;
+}
+
+aside .sair { /* essas são as especificações do botão de sair da conta */
+  width: 35%;
+  height: 35%;
+  font-size: 150%;
+  background-color: #F9F6F1;
+  color: #295B1D;
+  margin-bottom: 7%;
+  cursor: pointer;
+}
+
+/* ======================================================================= */
+
+main { /* Aqui se encontra a tag semantica main, onde se encotra todos os itens que estão na parte de baixo da nav, na lateral direita do site*/
+  width: 100%;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 8px #07240f;
+}
+
+main h1 { /* aqui é a tag de título, que contém a parte das "configurações da conta"*/
+  margin-top: -94%;
+  color: #293027;
+  margin-left: 50%;
+  margin-right: -50%;
+  margin-bottom: 2%;
+
+}
+
+.form-row {/* a tag form-row é onde começa o formulário do site. Nós pegamos as informações fonecidas pelos clientes na parte do login, levamos ao nosso banco de dados e disponibilizamos para caso o usuário precise fazer alguma alteração. Aqui estão as especificações do formulário da parte esquerda*/
+  width: 30px;
+  height: 30px;
+  margin-top: -750px;
+  margin-bottom: 600px;
+  margin-right: 600px;
+  margin-left: 200px;
+
+}
+
+h2 {/* aqui é a tag de subtítulo, onde estão as espqcificações de nome/telefone/estado*/
+  font-size: 20px;
+  margin-top: 50px;
+  color: #07240f;
+}
+
+.form-control {/* aqui é a tag que comtém as caixas onde os usuários digitam as suas informações*/
+  font-size: 15px;
+  background-color: #F9F6F1;
+  padding: 20px;
+  border-radius: 20px;
+  border: #07240f;
+  -webkit-box-shadow: 5px 11px 8px 2px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 5px 11px 8px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 5px 11px 8px 2px rgba(0, 0, 0, 0.24);
+}
+
+.form { /* a form é como se fosse a form-row, só que é o formulário da parte direita*/
+  width: 30px;
+  height: 30px;
+  margin-top: -750px;
+  margin-bottom: 600px;
+  margin-left: -100px;
+}
+
+.form-group-Nome {/* div das caixas + h2*/
+  padding-left: 10%;
+}
+
+
+/* ======================================================================= */
+
+footer {/* daqui para baixo se encontra todos elementos presentes na tag footer. Desde a prototipagem, até a inserção das redes sociais, slogam do projeto.*/
+  width: 100%;
+  height: 500px;
+  background-color: #295B1D;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  margin-top: -320px;
+}
+
+/* ==================================== */ 
+footer .slogan { /* Aqui está presente todas as especificações do slogan no footer*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  margin-top: 15px;
+  left: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+footer .slogan img {
+  width: 20%;
+  filter: drop-shadow(0 0 3px #103b02);
+}
+
+footer .slogan h2 {
+  margin-top: 10px;
+  font-size: 20px;
+  margin-left: 35px;
+  color: #f9f6f1;
+  text-shadow: 0 0 8px #07240f;
+  text-align: center;
+}
+
+/* ==================================== */ 
+footer .social-icons {/* Aqui está presente todas as especificações do icones das redes sociais*/
+  position: absolute;
+  bottom: 25%;
+  left: 5%;
+  transform: translateY(50%);
+  margin: 20px;
+}
+
+footer .social-icons h1 {
+  color: #6e8b21;
+  text-shadow: 0 0 8px #07240f;
+}
+
+footer .social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  border: none;
+  background-color: #F9F6F1;
+  color: #295B1D;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 15px;
+  transition: 0.5s ease-in-out;
+}
+
+footer .social-icons a:hover {
+  color: #f9f6f1;
+  background-color: #295B1D;
+  font-size: 35px;
+}
+
+/* ==================================== */
+footer .infoSobre,
+footer .infoPedidos,
+footer .infoSuporte,
+footer .info { /* Aqui está presente todas as especificações das informações que estão presentes no site*/
+  float: right;
+  justify-content: center;
+  margin-right: 30px;
+  padding: 20px;
+}
+
+footer .infoSobre h3,
+footer .infoPedidos h3,
+footer .infoSuporte h3,
+footer .info h3 {
+  margin-top: 65px;
+  margin-right: 25px;
+}
+
+footer h3 {
+  color: #6e8b21;
+}
+
+footer h4 {
+  color: #f9f6f1;
+  margin-top: 20px;
+}
+
+/* ==================================== */
+footer .rodape {/* Aqui está presente todas as especificações do rodapé do footer*/
+  width: 100%;
+  padding: 20px 8%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .rodape hr {
+  width: 100%;
+  height: 1px;
+  background-color: #F9F6F1;
+  margin: 10px 0;
+  position: absolute;
+  bottom: 100%;
+  z-index: 3;
+  margin-left: -122px;
+}
+
+footer .rodape p {
+  color: #fff;
+  margin: 0;
+}
+
+footer .rodape h5,
+footer .rodape h6 {
+  color: #f9f6f1;
+  margin: 0;
+  font-size: 15px;
+}
+
+@keyframes joca-para-o-meio {
+  0% {
+    transform: translateX(-100%) rotate(0);
+  }
+
+  100% {
+    transform: translateX(5%) rotate(360deg);
+  }
+}
