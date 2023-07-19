@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Site de comparação de insumos agricolas">
+  <meta name="keywords" content="Agro, Insumo, Comparaçãp">
+  <meta name="author" content="AgroUp">
+  <title>AgroUP - Cadastro</title> <!-- Titulo do navegador da página -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .error-message {
+      color: rgb(198, 21, 21);
+      margin-top: 5px;
+      font-size: 12px; /* Define o tamanho da fonte para 12 pixels */
+    }
+  </style>
+</head>
+<!-- ========================================================= -->
+<body> <!-- A partir daqui é desenvolvido todas as partes presentes no registro do site-->
+  <div class="container" id="container">
+
+    <div class="form-container register-container">
+      <form id="register-form" action="#">
+        <h1>Registre-se aqui.</h1> <!-- titulo -->
+        <input id="nome" type="text" placeholder="Nome"> <!-- input de dados -->
+        <p id="nome-error-message" class="error-message"></p>
+        <input id="email" type="email" placeholder="Email">
+        <p id="email-error-message" class="error-message"></p>
+        <input id="datanascimento" type="date" placeholder="Data de nascimento">
+        <p id="data-nascimento-error-message" class="error-message"></p>
+        <input id="senha" type="password" placeholder="Senha">
+        <div class="senha">
+          <ul class="requeriment-list">
+            <li> <!-- div das especificações que precisam ter para se registrar no site -->
+              <i class="fa-solid fa-circle"></i>
+              <span>Mínimo de 8 caracteres</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle"></i>
+              <span>Pelo menos 1 número (0..9)</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle"></i>
+              <span>Pelo menos 1 letra maiúscula(a..z)</span>
+            </li>
+          </ul>
+        </div><!-- Registrar com redes sociais -->
+        <button type="submit">Criar conta</button>
+        <span>Ou use sua conta</span>
+        <div class="social-container">
+          <a href="#" class="social"><i class="lni lni-facebook-fill"></i></a>
+          <a href="#" class="social"><i class="lni lni-google"></i></a>
+          <a href="#" class="social"><i class="lni lni-linkedin-original"></i></a>
+        </div>
+      </form>
+    </div>
+    <!-- A partir daqui é desenvolvido todas as partes presentes no login do site-->
+    <div class="form-container login-container">
+      <form id="login-form" action="#">
+        <h1>Faça o login aqui.</h1><!-- titulo -->
+        <input id="login-email" type="email" placeholder="Seu Email"> <!-- input de dados -->
+        <p id="login-email-error-message" class="error-message"></p>
+        <input id="login-senha" type="password" placeholder="Senha">
+        <p id="login-senha-error-message" class="error-message"></p>
+        <div class="content">
+          <div class="checkbox">
+            <input type="checkbox" name="checkbox" id="checkbox">
+            <label>Lembre-me</label>
+          </div>
+          <div class="pass-link"> <!-- div das especificações de recuperação de senha do site -->
+            <a href="#">Esqueceu a senha?</a>
+          </div>
+        </div> <!-- Login com redes sociais -->
+        <button type="submit" href="../Hometela/index.html">Login</button>
+        <span>Ou use sua conta</span>
+        <div class="social-container">
+          <a href="http://127.0.0.1:5501/TelasDemoday/Hometela/index.html#"><i class="fa-brands fa-google" ></i></a>
+            <a href="https://www.linkedin.com/company/agroupoficial/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/agroupoficial/"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </form>
+    </div>
+
+    <!-- ========================================================= -->
+<!-- A partir daqui é desenvolvido a parte onde se tem presente a animação de registro ou login do site-->
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <div class="title">
+            <a href="../Hometela/index.html">
+              <div>
+                <img src="img/logo_branca_com_verde.png" alt="">
+              </div>
+            </a>
+          </div>
+          <p>Se você tem uma conta, faça o login aqui.</p>
+          <button class="ghost" id="login">Login <i class="lni lni-arrow-left login"></i></button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1 class="title">
+            <a href="../Hometela/index.html">
+              <div>
+                <img src="img/logo_branca_com_verde.png" alt="">
+              </div>
+            </a>
+          </h1>
+          <p>Cultivando o sucesso.</p>
+          <button class="ghost" id="register">Registrar <i class="lni lni-arrow-right register"></i></button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+<!-- ========================================================= -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://kit.fontawesome.com/9796628c85.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+        

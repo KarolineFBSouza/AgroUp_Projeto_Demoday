@@ -1,0 +1,675 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins");
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    text-decoration: none;
+  box-sizing: border-box;
+}
+
+/* =========================================================  */
+/* Aqui está presente todas as especificações do corpo da página, como fonte das letras, tamanhos etc*/
+body {
+  display: flex;
+  background-image: url(../img/Premium\ Photo\ _\ Corn\ fields\ -\ agriculture\ photo\ theme_\ small\ corn\ plants_.jpg);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  min-height: 100vh;
+}
+/* =========================================================  */
+/* A partir daqui, temos o desenvolvimento das estlização das parte do overlay do site, onde se encontram a logo do site e outras partes*/
+h1 {
+  color: #07240f;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  margin: 0;
+  margin-top: -60px;
+  margin-bottom: 25px;
+}
+
+h1.title {
+color: #07240f;
+  font-size: 45px;
+  line-height: 45px;
+  margin: 0;
+  text-shadow: 0 0 3px #F9F6F1;
+}
+
+p {
+color: #ffffff;
+  font-size: 24px;
+  font-weight: 800;
+  font-family: 'poppins';
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
+  text-shadow: 0 0 8px #071f0125;
+}
+
+span { /*destaque de texto*/
+color: #07240f;
+font-size: 18px;
+text-shadow: 0 0 2px #295B1D;
+border-bottom: 2px solid #240707;
+margin-top: 17px;
+}
+
+a {
+  color: #07240f;
+  font-size: 15px;
+  text-decoration: none;
+  margin: 15px 0;
+  transition: 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #295B1D;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  justify-content:space-around;
+}
+
+.content .checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content input {
+  accent-color: #07240f;
+  width: 12px;
+  height: 12px;
+}
+
+.content label {
+    color: #07240f;
+  font-size: 15px;
+  user-select: none;
+  padding-left: 3px;
+}
+
+button { /*botão*/
+  position: relative;
+  border-radius: 20px;
+  border: 1px solid #3C6930;
+  background: linear-gradient(45deg, #295B1D, #6E8B21);
+  box-shadow: 0px 0px 10px #07240f;
+  color: #F9F6F1;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 10px;
+  margin-top: 25px;
+  padding: 12px 80px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+button:hover { /*animação do botão*/
+  letter-spacing: 3px;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:focus {
+  outline: none;
+}
+
+button.ghost {
+  background-color: #3C6930;
+  border: 2px solid #6E8B21;
+  color: #F9F6F1;
+}
+
+button.ghost i{
+  position: absolute;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+button.ghost i.register{
+  right: 70px;
+}
+
+button.ghost i.login{
+  left: 70px;
+}
+
+button.ghost:hover i.register{ /*botão de registro*/
+  right: 40px;
+  opacity: 1;
+}
+
+button.ghost:hover i.login{ /*botão de login*/
+  left: 40px;
+  opacity: 1;
+}
+
+/* =========================================================  */
+/* Aqui está presente todas as especificações do forms de registro*/
+form { /*formulário para obtenção de dados*/
+  background: #F9F6F1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
+  
+}
+
+input {
+  color: #122407;
+  font-weight: bold;
+  font-size: 17px;
+  background-color: #F9F6F1;
+  border-radius: 20px;
+  border: 2px solid #07240f17;
+  box-shadow: 0px 8px 4px #02080031;
+  padding: 12px 15px;
+  margin: 8px 0;
+  margin-bottom: 5px;
+  width: 60%;
+}
+
+.senha { /*senha*/
+  width: 360px;
+  border: 3px solid #F9F6F1;
+  background: linear-gradient(120deg, #2a6b1a, #6E8B21);
+  border-radius: 10px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.requeriment-list { /*requesitos para ser feito a senha*/
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.requeriment-list li {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1px;
+}
+
+.requeriment-list li i {
+  font-size: 0.6rem;
+  color: #013510;
+  width: 20px;
+  margin-right: 4px;
+  margin-top: 25px;
+}
+
+.requeriment-list li span {
+  color: #F9F6F1;
+  font-weight: 400;
+  font-family: 'poppins';
+  text-align: center;
+}
+
+.requeriment-list li.valid i {
+  font-size: 1.2rem;
+  color: #013510;
+}
+
+.requeriment-list li.valid span {
+  color: #ffffff;
+}
+
+input::placeholder{
+  opacity: 90%;
+  font-weight: 400;
+}
+
+/* =========================================================  */
+/* Aqui está presente todas as especificações do forms de login*/
+.container {
+  background:#F9F6F1;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  overflow: hidden;
+  width: 650px;
+  width: 100%;
+  min-height: 1000px;
+}
+
+.form-container {  /*mini formulário*/
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+
+.login-container {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+  margin-top: -65px;
+}
+
+.container.right-panel-active .login-container {
+  transform: translateX(100%);
+}
+
+.register-container {  /*caixa de registro*/
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.pass-link a{
+  color: #07240f;
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+.container.right-panel-active .register-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: show 0.6s;
+}
+
+/* =========================================================  */
+
+ /*Aqui estão as especificações da animação que se tem presente quando se clica na parte de registro ou login*/
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.title img{
+  float: left;
+  width: 60%;
+  justify-content: center;
+  text-align: center;
+  margin-left: 130px;
+  filter: drop-shadow(0px 0px 6px #476d2e75);
+}
+
+.logo{  /*logo agroup*/
+  display: flex;
+  float: top;
+  margin-top: -467px;
+  margin-left: -20px;
+}
+
+.container.right-panel-active .overlay-container {
+  transform: translate(-100%);
+}
+
+.overlay {
+  background-image: url(../img/wallpaperflare.com_wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  color: #ffa4086e;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+  margin-top: -115px;
+}
+
+.overlay::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    rgba(46, 94, 109, 0.4) 40%,
+    rgba(46, 94, 109, 0)
+  );
+}
+
+.container.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.overlay-panel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+  transform: translateX(-20%);
+}
+
+.container.right-panel-active .overlay-left {
+  transform: translateX(0);
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+  transform: translateX(20%);
+}
+
+.pass-link a{
+  color: #F9F6F1;
+  width: 0px;
+}
+
+.social-container {
+  margin: 20px 0;
+}
+
+.social-container a {
+  border: 1px solid #F9F6F1;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px;
+  height: 60px;
+  width: 60px;
+  transition: 0.5s ease-in-out;
+}
+
+.social-container a:hover {
+  border: 2px solid #3C6930;
+  background: linear-gradient(145deg, #295B1D, #6E8B21);
+  color: #F9F6F1;
+  box-shadow: 0px 0px 8px #07240f;
+  font-size: 25px;
+}
+
+/* =========================================================  */
+@keyframes show {
+  0%,
+  49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 40px;
+    width: 650px;
+    margin: 0 auto;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 300px;
+  }
+
+  button {
+    width: auto;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .container {
+    padding: 20px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+  }
+}
+
+/* ---------------------- */
+
+/* Aqui está aplicado a responsividade */
+
+@media screen and (max-width: 768px) {
+  h1.title {
+    font-size: 26px;
+    line-height: 26px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .senha {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    margin-top: 20px;
+  }
+
+  .title img {
+    float: none;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .container {
+    padding: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .container.right-panel-active .overlay {
+    width: 200%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1.title {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+
+  .senha {
+    height: 80px;
+  }
+
+  .container {
+    padding: 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .container.right-panel-active .overlay {
+    width: 300%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  h1.title {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    padding: 6px;
+    margin-bottom: 6px;
+  }
+
+  .senha {
+    height: 60px;
+  }
+
+  .container {
+    padding: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .container.right-panel-active .overlay {
+    width: 350%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 40px;
+    width: 650px;
+    margin: 0 auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 300px;
+  }
+
+  button {
+    width: auto;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .container {
+    padding: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+  }
+}
